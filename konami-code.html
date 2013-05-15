@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Konami Code Demo</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <style>
+.content.content-konami-code-demo .konami-h1{font-size:700%} .content.content-konami-code-demo p.konami-p{font-size:450%}</style>
+    <script></script>
+  </head>
+  <body>
+    <div class="content content-konami-code-demo">
+		<h1 class="konami-h1">Konami Code Demo</h1>
+		<p class="konami-p">The Konami Code is up, up, down, down, left, right, left, right, b, a.  Try it out.</p>
+    </div>
+  </body>
+<script>
+if ( window.addEventListener ) {  
+  var state = 0, konami = [38,38,40,40,37,39,37,39,66,65];  
+  window.addEventListener("keydown", function(e) {  
+    if ( e.keyCode == konami[state] ) state++;  
+    else state = 0;  
+    if ( state == 10 )  
+      window.location = "contra/contra.html";
+    }, true);  
+} 
+</script>
+</html>
